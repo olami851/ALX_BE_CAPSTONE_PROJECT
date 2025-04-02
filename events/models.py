@@ -12,12 +12,12 @@ class User(AbstractUser):
     username = models.CharField(max_length=200, unique=True)
 
 class Event(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=255)
     description = models.TextField()
     date_time = models.DateTimeField(auto_now_add=True)
-    location = models.CharField(max_length=200)
-    organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='organizers')
-    capacity = models.IntegerField()
+    location = models.CharField(max_length=255)
+    organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    capacity = models.PositiveIntegerField()
     created_date = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):

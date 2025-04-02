@@ -32,9 +32,10 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # my apps
-    'event_planner',
+    'events',
     'rest_framework',
     'django_filters',
+    'rest_framework.authtoken'
     
     
     # default django apps
