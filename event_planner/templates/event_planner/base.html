@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Event Management{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Event Management System</h1>
+        <nav>
+            <a href="{% url 'event_planner:index' %}">Home</a>
+            <!-- Add more nav items here -->
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Event Platform</p>
+    </footer>
+</body>
+</html>

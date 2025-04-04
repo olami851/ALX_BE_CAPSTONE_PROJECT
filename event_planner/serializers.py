@@ -1,11 +1,11 @@
 from rest_framework import serializers
 from .models import Event
-from rest_framework.authtoken.models import Token
+# from rest_framework.authtoken.models import Token
 from django.contrib.auth import get_user_model
 from django.contrib.auth import authenticate
 from django.utils import timezone
 User = get_user_model()
-token = Token.objects.create
+# token = Token.objects.create
 
 # user serializer
 
